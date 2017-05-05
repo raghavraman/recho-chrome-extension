@@ -1,0 +1,18 @@
+{
+  "name": "recho-chrome-extension",
+  "authors": [
+    "Raghav-zarget"
+  ],
+  "description": "",
+  "main": "",
+  "license": "PRIVATE",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
