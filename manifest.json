@@ -11,6 +11,9 @@
   },
   "permissions": [
    "activeTab",
-    "tabs"
-   ]
+    "tabs",
+    "storage",
+     "cookies",
+  "*://*.recho.com/*"
+   ]  
 }
