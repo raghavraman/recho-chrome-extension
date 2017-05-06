@@ -15,8 +15,7 @@ body {width: 300px; height:150px;
 {
   height: 50px;
     width: 50px;
-    margin-left: 30%;
-     /*right center;*/
+    margin-left: 40%;
 }
 .wrapper {
     text-align: center;
@@ -25,8 +24,27 @@ body {width: 300px; height:150px;
 .button {
     position: absolute;
     top: 45%;
+    right: 60%;
+    border-radius: 10%;
+}
+.button1 {
+    position: absolute;
+    top: 45%;
+    right: 12%;
+    border-radius: 10%;
+}
+.openRekho {
+      position: absolute;
+    bottom: 20px;
+    right: 41%
+}
+.button3{
+	position: absolute;
+    top: 45%;
     right: 45%;
     border-radius: 10%;
+    margin-top: 10px;
+}
 }
 </style>
 <body>
@@ -36,13 +54,15 @@ body {width: 300px; height:150px;
 	<div>
 	<h3 style="text-align: center" id="successSave"></h3></div>
 	<div class="wrapper">
-    	<button id="saveToAPI" class="button">Listen Later</button>
+    	<button id="signin" class="button3" style="display:none">SIGN IN</button>
 	</div>
 	<div class="wrapper">
-    	<button id="signin" class="button" style="display:none">SIGN IN</button>
+    	<button id="saveToAPI" class="button">Listen Later</button>
+    	<button id="saveToFAV" class="button1">Mark as Favorite</button>
 	</div>
-	
-
+	<div>
+	<span class="openRekho"><a href="https://www.rekho.com/">Open Rekho</a></span></div>
+	<div id="focusout"></div>
 </body>
 
 </html>
