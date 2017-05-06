@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
     checkPageButton.style.display = 'block';
     var responseText=document.getElementById('successSave');
     checkPageButton.addEventListener('click', function() {
+      checkPageButton.style.display = 'none';
+      $('#loadinGif').show();
         chrome.tabs.getSelected(null, function(tab) {
             var tablink = tab.url;
                 //send request tot api
@@ -32,12 +34,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 success: function(data) {
                     responseText.innerHTML="Added to your listening list";
-                    checkPageButton.style.display = 'none';
+                    $('#loadinGif').hide();
                 },
                 error: function(e) {
-                  responseText.innerHTML="SORRY    " +e.responseJSON.url.join(", ");
+                  responseText.innerHTML="Sorry:     " +e.responseJSON.url.join(", ");
                     console.log(e);
-                    checkPageButton.style.display = 'none';
+                    $('#loadinGif').hide();
                 }
             });
         });
