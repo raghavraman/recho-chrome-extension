@@ -7,7 +7,9 @@
     <script src="popup.js"></script>
 </head>
 <style type="text/css">
+
 body {width: 300px; height:150px;
+		font-family: "Verdana"
 	 }
 .loadinggif 
 {
@@ -16,18 +18,31 @@ body {width: 300px; height:150px;
     margin-left: 30%;
      /*right center;*/
 }
+.wrapper {
+    text-align: center;
+}
 
-
-
+.button {
+    position: absolute;
+    top: 45%;
+    right: 45%;
+    border-radius: 10%;
+}
 </style>
 <body>
-
-	<div style="max-width: 210px; margin: 5px auto 0 auto;">
-	<h3>Welcome to Recho</h3>
-	<img class="loadinggif" id="loadinGif" src='ajax-loader.gif' style="display:none" />
-	<h2 id="successSave"></h2>
-    <button id="saveToAPI">Listen Later</button>
+	<div><h2 style="text-align: center">Welcome to Rekho</h3></div>
+	<div>
+	<img class="loadinggif" id="loadinGif" src='ajax-loader.gif' style="display:none" /></div>
+	<div>
+	<h3 style="text-align: center" id="successSave"></h3></div>
+	<div class="wrapper">
+    	<button id="saveToAPI" class="button">Listen Later</button>
 	</div>
+	<div class="wrapper">
+    	<button id="signin" class="button" style="display:none">SIGN IN</button>
+	</div>
+	
+
 </body>
 
 </html>
