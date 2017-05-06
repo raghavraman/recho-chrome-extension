@@ -2,7 +2,8 @@
     var cookval,
         checkPageButton = document.getElementById('saveToAPI'),
         favPageButton = document.getElementById('saveToFAV'),
-        signInButton =    
+        signInButton =  document.getElementById('signin'), 
+        openrekho= document.getElementById('test'),
         responseText= document.getElementById('successSave');
         checkPageButton.style.display = 'block';
         document.getElementById("focusout").focus();
@@ -58,12 +59,15 @@
            chrome.tabs.create({ url: 'https://www.rekho.com/' });
       }, false);
 
+        openrekho.addEventListener('click', function() {
+           chrome.tabs.create({ url: 'https://www.rekho.com/' });
+      }, false);
 
 
       favPageButton.addEventListener('click', function() {
         checkPageButton.style.display = 'none';
         favPageButton.style.display = 'none';
-        debugger
+
         $('#loadinGif').show();
           chrome.tabs.getSelected(null, function(tab) {
               var tablink = tab.url;
